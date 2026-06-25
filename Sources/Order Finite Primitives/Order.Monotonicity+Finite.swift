@@ -2,12 +2,12 @@
 // Conforms Order.Monotonicity (swift-order-primitives) to Finite.Enumerable
 // (this package). finite → order is a downward dependency.
 
+import Cardinal_Primitives
 public import Finite_Enumerable_Primitives
 public import Order_Monotonicity_Primitives
-import Cardinal_Primitives
 import Ordinal_Primitives
 
-extension Order.Monotonicity: Finite.Enumerable {
+extension Order.Monotonicity: @retroactive Finite.Enumerable {
     /// Number of monotonicity values.
     @inlinable
     public static var count: Cardinal { 3 }
